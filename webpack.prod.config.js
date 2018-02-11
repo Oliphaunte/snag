@@ -17,7 +17,7 @@ const webpackEnv = new webpack.DefinePlugin({
 });
 const uglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
   minimize: true,
-  sourceMap: true
+  // sourceMap: true
 });
 const extractSass = new ExtractTextPlugin({
   filename: "index.bundle.css",
@@ -50,7 +50,7 @@ const cssRules = {
 };
 
 module.exports = merge(BASE_CONFIG, {
-  devtool: 'source-map',
+  // devtool: 'source-map',
   module: {
     rules: [
       cssRules
