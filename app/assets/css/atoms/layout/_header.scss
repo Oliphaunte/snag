@@ -1,0 +1,30 @@
+header {
+  z-index: $higher_index;
+  box-sizing: border-box;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  right: 0; 
+
+  margin: 0 auto;
+  padding: 0 10px;
+  height: $header_height_mobile;
+  background-color: rgba($general_black, 0.9);
+
+  img {
+    padding: 10px 0;
+  }
+
+  @include breakpoint($tablet) {
+    padding: 0 20px;
+    height: $header_height_tablet;
+
+    img {
+      padding: 20px 0;
+    }
+  }
+}

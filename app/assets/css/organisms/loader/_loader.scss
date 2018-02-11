@@ -1,0 +1,32 @@
+.m__loader {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 60px;
+  text-align: center;
+  background-color: rgba($general_white, 1);
+
+  span {
+    opacity: 0.5;
+
+    display: inline-block;
+    margin: 0 2px;
+    height: 100%;
+    width: 6px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    animation: loaderAnimation 2s ease-in infinite;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.15s;
+      }
+    }
+  }
+}

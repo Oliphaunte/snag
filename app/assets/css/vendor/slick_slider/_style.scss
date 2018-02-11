@@ -1,0 +1,42 @@
+.slick-slider {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+
+  @include breakpoint($tablet) {
+  }
+
+  @include breakpoint($tablet_landscape) {
+  }
+
+  @include breakpoint($desktop) {
+  }
+}
+
+.slick-track {
+}
+
+.slick-list {
+}
+
+.slick-slide {
+  padding: 0 20px;
+  height: auto;
+  text-align: center;
+}
+
+.slick-arrow {
+  z-index: $higher_index;
+  transform: translate(0, -30px);
+
+  &:before {
+    color: $general_black; 
+  }
+}
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}

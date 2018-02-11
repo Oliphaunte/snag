@@ -1,0 +1,59 @@
+.m__movie-item {
+  display: flex;
+  flex-basis: calc(100% / 3);
+
+  position: relative;
+  
+  .item-container {
+    position: relative;
+
+    img {
+      z-index: $medium_index;
+      
+      position: relative;
+      width: 100%;
+      // transition: z-index 0.8s;
+    }
+  
+    aside {    
+      z-index: $low_index;
+  
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  
+      background-color: rgba($general_black, 0.8);
+      // transition: left 0.4s, z-index 0.8s;
+
+      p {
+        color: rgba($general_white, 1);
+      }
+    }
+
+    &:hover {
+      img {
+        z-index: $higher_index;
+        // transition: z-index 0s;
+      }
+
+      aside {
+        z-index: $high_index;
+  
+        left: 100%;
+        transition: left 0.4s;
+      }
+    }
+  }
+
+  &.last-of-type {
+    &:hover {
+      aside {
+        left: -100%;
+      }
+    }
+  }
+}

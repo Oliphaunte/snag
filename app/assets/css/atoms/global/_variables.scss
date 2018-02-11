@@ -1,0 +1,23 @@
+// Colors
+$general_white: rgb(255, 255, 255);
+$general_black: rgb(0, 0, 0);
+
+// Layout
+$header_height_mobile:     50px;
+$footer_height_mobile:     60px;
+$header_height_tablet:     70px;
+$footer_height_tablet:     60px;
+
+// Breakpoints
+$mobile:            520px;
+$tablet:            700px;
+$tablet_landscape:  1024px;
+$desktop:           1201px;
+
+// Indexes
+$lowest_index:  -1;
+$low_index:     100;
+$medium_index:  400;
+$high_index:    900;
+$higher_index:  990;
+$highest_index: 999;
