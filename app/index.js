@@ -11,7 +11,7 @@ const supportsHistory = "pushState" in window.history
 if (typeof window !== 'undefined') {
   ReactDOM.render (
     <BrowserRouter basename={process.env.BASE_URL} forceRefresh={!supportsHistory}>
-        <App />
+      <App />
     </BrowserRouter>,
     document.getElementById('app')
   );

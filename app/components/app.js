@@ -18,7 +18,6 @@ class App extends React.Component {
         <Header />
           <Switch>
             <Route exact path="/" component={Home}  />
-            {/* <Route path="/contact"  component={Contact} /> */}
           </Switch>
         <Footer />
       </React.Fragment>
