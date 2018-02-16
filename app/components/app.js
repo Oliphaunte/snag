@@ -5,8 +5,6 @@ import Header   from "@/app/components/templates/header"
 import Footer   from "@/app/components/templates/footer"
 import Home     from "@/app/components/templates/home"
 
-require("@/app/assets/css/app.scss")
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -16,9 +14,11 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
+
           <Switch>
-            <Route exact path="/" component={Home}  />
+            <Route exact path="/" component={Home} />
           </Switch>
+
         <Footer />
       </React.Fragment>
     )
