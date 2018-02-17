@@ -5,17 +5,17 @@ export function itemsError(bool) {
   }
 }
 
-export function itemsLoading(bool) {
-  return {
-    type: 'ITEMS_LOADING',
-    isLoading: bool
-  }
-}
-
 export function itemsFetchSuccess(data) {
   return {
     type: 'ITEMS_FETCH_SUCCESS',
     data
+  }
+}
+
+export function itemsLoading(bool) {
+  return {
+    type: 'ITEMS_LOADING',
+    isLoading: bool
   }
 }
 
@@ -26,8 +26,15 @@ export function itemsFetch(url) {
     fetch(url)
       .then(res => res.json())
       .then(data => dispatch(itemsFetchSuccess(data)) )
-      .then(() => dispatch(itemsLoading(false)) )
+      // .then(() => dispatch(itemsLoading(false)) )
       .catch(err => dispatch(itemsError(true)) );
   }
-
 }
+
+// Image load
+// export function itemsLoading(bool) {
+//   return {
+//     type: 'ITEMS_LOADING',
+//     isLoading: bool
+//   }
+// }

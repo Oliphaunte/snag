@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types';
 // Store //
 import { connect } from 'react-redux';
-import { itemsFetch } from '@/app/store/actions/items';
+import { itemsFetch, itemsLoading } from '@/app/store/actions/items';
 
 import Films from "@/app/components/organisms/films"
 import Loader from '@/app/components/organisms/loader'
@@ -20,6 +20,10 @@ class Home extends React.Component {
     this.props.fetchData(api_url)
   }
 
+  onLoad= () => {
+    this.props.imagesLoading(false)
+  }
+
   findLast() {
     let elements = document.getElementsByClassName('slick-active')
     let last = document.getElementsByClassName('last-of-type')
@@ -32,13 +36,15 @@ class Home extends React.Component {
   }
 
   renderLoader() {
-    const {films} = this.props
-    
     if (this.props.isLoading) {
       return <Loader />
     }
+  }
 
-    return <Films onMouseEnter={this.findLast} films={films} />
+  renderGallery() {
+    const {films} = this.props
+
+    return <Films onMouseEnter={this.findLast} onLoad={this.onLoad} films={films} />
   }
 
   render() {
@@ -46,6 +52,8 @@ class Home extends React.Component {
       <main className="t__home-page">
         <div className="o__movies-grid">
           {this.renderLoader()}
+
+          {this.renderGallery()}
         </div>
       </main>
     )
@@ -61,7 +69,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchData: (url) => dispatch(itemsFetch(url))
+    fetchData: (url) => dispatch(itemsFetch(url)),
+    imagesLoading: (bool) => dispatch(itemsLoading(bool))
   }
 }
 
