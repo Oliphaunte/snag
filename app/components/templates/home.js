@@ -36,9 +36,10 @@ class Home extends React.Component {
   }
 
   renderLoader() {
-    if (this.props.isLoading) {
-      return <Loader />
-    }
+    let is_active;
+    this.props.isLoading ? is_active = true : is_active = false 
+
+    return <Loader isActive={is_active}/>
   }
 
   renderGallery() {

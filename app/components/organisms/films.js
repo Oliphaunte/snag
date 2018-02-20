@@ -35,7 +35,6 @@ function imagesLoaded(parentNode) {
 
 class Films extends React.Component {
   handleImageLoad= () => {
-    console.log('yup')
     if (imagesLoaded(this.movie_item)) return this.props.onLoad()
   }
 

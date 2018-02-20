@@ -12,3 +12,13 @@
     opacity: 0.5;
   }
 }
+
+@keyframes fadeOutLoader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

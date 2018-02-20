@@ -1,13 +1,17 @@
 import React from 'react'
 
-const Loader = () => (
-  <div className="m__loader">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-  </div>
-)
+class Loader extends React.Component {
+  render() {
+    return (
+      <div className={"m__loader " + (this.props.isActive ? 'active' : 'inactive') }>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    )
+  }
+}
 
 export default Loader
