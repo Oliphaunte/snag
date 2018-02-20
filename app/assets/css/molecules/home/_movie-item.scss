@@ -35,6 +35,8 @@
     }
 
     &:hover {
+      cursor: pointer;
+      
       img {
         z-index: $higher_index;
         // transition: z-index 0s;

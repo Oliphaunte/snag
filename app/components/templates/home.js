@@ -10,6 +10,10 @@ import Loader from '@/app/components/organisms/loader'
 
 const api_url = "http://www.snagfilms.com/apis/films.json?limit=10"
 
+type Props = {
+  
+}
+
 class Home extends React.Component {
   static propTypes = {
     films: PropTypes.array,

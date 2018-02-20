@@ -20,8 +20,7 @@
   }
 
   &.inactive {
-    opacity: 0;
-    transition: opacity 0.5s;
+    animation: fadeOutLoader 0.5s forwards;
   }
 
   span {
